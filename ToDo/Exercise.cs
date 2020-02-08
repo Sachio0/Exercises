@@ -37,7 +37,7 @@ namespace ToDo
         //przykład:
         //in: "ale dziwne zadanie",'e' ,"nie"
         //out: "alenie dziwnenie zadanienie"
-        public string CezarCode(string sentence, char character, string word)
+        public string AddWord(string sentence, char character, string word)
         {
 
         }
@@ -57,12 +57,16 @@ namespace ToDo
         {
 
         }
-        //stwórz algorytm zwracający tablice bool który mówi czy w string-u znajduje się jakaś fraza
+        //stwórz test sprawdzający czy metoda działa poprawnie w klasie ExerciseTests w projekcie Unit test
+        //następnie stwórz algorytm zwracający tablice bool który mówi czy w string-u znajduje się jakaś fraza
         //przykład:
         //in: []{"ale ale","ale tak","ale","a"}, "ale"
         //out: []{true,true,true,false}
         public bool[] Find(string[] senteces, string phrase)
         {
         }
+        
+
+
     }
 }
