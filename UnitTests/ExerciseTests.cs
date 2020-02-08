@@ -40,10 +40,14 @@ namespace UnitTests
         [DataRow(new[] { 0, 0, 0 }, 2)]
         public void ResizeLvlUpTest(int[] array, int size)
         {
-            int[] res = _exercise.Resize(array, size);
+            int[] res = _exercise.ResizeLvlUp(array, size);
             for (int i = 0; i < res.Length; i++)
             {
-                Assert.AreEqual(res[i], array[i]);
+                if( i < array.Length - 1)
+                {
+                    Assert.AreEqual(res[i], array[i]);
+                }
+                
             }
 
             Assert.AreEqual(size, res.Length);
@@ -58,7 +62,7 @@ namespace UnitTests
         }
         [DataTestMethod]
         [DataRow(new[] { 1, 2, 3 }, new[] { 3, 2, 1 }, new[] { 1, 2, 3, 3, 2, 1 })]
-        [DataRow(new[] { 0, 0, 3 }, new[] { 3, 0, 0 }, new[] { 1, 2, 3, 3, 0, 0 })]
+        [DataRow(new[] { 0, 0, 3 }, new[] { 3, 0, 0 }, new[] { 0, 0, 3, 3, 0, 0 })]
         [DataRow(new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0, 0, 0, 0 })]
         public void JoinTest(int[] a, int[] b, int[] expect)
         {
@@ -67,8 +71,8 @@ namespace UnitTests
         }
         [DataTestMethod]
         [DataRow(new[] { 1, 2, 3 }, new[] { 1, 2, 3 }, new[] { 1, 1, 2, 2, 3, 3 })]
-        [DataRow(new[] { 0, 0, 3 }, new[] { 3, 0, 0 }, new[] { 0, 3, 0, 0, 3, 0 })]
-        [DataRow(new[] { 0, 0, 0 }, new[] { 0, 0, 0 }, new[] { 0, 0, 0, 0, 0, 0 })]
+        [DataRow(new[] { 1, 2 }, new[] { 1, 2, 3 }, new[] { 1, 1, 2, 2, 3 })]
+        [DataRow(new[] { 1, 1, 1 }, new[] { 2, 2 }, new[] { 1, 2, 1, 2, 1 })]
         public void HarderJoinTest(int[] a, int[] b, int[] expect)
         {
             var res = _exercise.HarderJoin(a, b);
