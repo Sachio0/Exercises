@@ -14,8 +14,7 @@ namespace ToDo
         // out: 3,2,1
         public int[] ReversArray(int[] array)
         {
-            Array.Reverse(array);
-            return array;
+            
         }
         // stwórz algorytm zwiękrzający tablicę do podanego rozmiaru bez utraty danych
         //przykład:
