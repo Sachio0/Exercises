@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ToDo
 {
+    //Aby uruchomić testy bez napisania wszystkich zadań należy zakomentować pozostałe metody a następnie zbudować solucje
+    //Uwaga! Po napisaniu wszystkich zadań również należy zbudować solucje aby uruchomić testy
     public class Exercise
     {
         // stwórz algorytm odwracający tablicę
@@ -117,9 +119,9 @@ namespace ToDo
         //out: []{true,true,true,false}
         public bool[] Find(string[] senteces, string phrase)
         {
-            
+
         }
-        
+
 
 
     }
